@@ -22,6 +22,11 @@
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
+.container {
+  margin: auto;
+  width: 80%;
+}
+
 body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
@@ -144,16 +149,14 @@ section {
 
 /* header-content */
 .header-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 100%;
-}
-.header-content .right-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+}
+.header-content .right-header {
   width: 70%;
+  justify-content: center;
 }
 .header-content .right-header p {
   font-size: 16px;
@@ -163,7 +166,6 @@ section {
 .header-content .left-header {
   display: flex;
   align-items: center;
-  position: relative;
 }
 .header-content .left-header .h-shape {
   transition: all 0.4s ease-in-out;
@@ -179,7 +181,7 @@ section {
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
-  height: 60%;
+  height: 50%;
   width: 50%;
   margin-left: 4rem;
   background-color: var(--color-black);
@@ -205,4 +207,9 @@ section {
   border-radius: 10px;
 }
 
+@media (max-width: 1200px) {
+  .header-content {
+    flex-direction: column;
+  }
+}
 /* Independed components*//*# sourceMappingURL=styles.css.map */

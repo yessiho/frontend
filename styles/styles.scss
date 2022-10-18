@@ -22,6 +22,11 @@
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
+.container {
+  margin: auto;
+  width: 80%;
+}
+
 body{
     background-color: var(--color-primary);
     font-family: 'Poppins', sans-serif;
@@ -145,15 +150,13 @@ a {
 
 /* header-content */ 
 .header-content{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   .right-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 70%;
+    justify-content: center;
     p {
       font-size: 16px;
       color: var(--paragraph-color);
@@ -163,7 +166,6 @@ a {
   .left-header{
     display: flex;
     align-items: center;
-    position: relative;
     .h-shape{
       transition: all .4s ease-in-out;
       width: 60%;
@@ -177,7 +179,7 @@ a {
     }
     .image{
       border-radius: var(--br-sm-2);
-      height: 60%;
+      height: 50%;
       width: 50%;
       margin-left: 4rem;
       background-color: var(--color-black);
@@ -202,6 +204,12 @@ a {
   padding: 1em 2em;
   color: #fff;
    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .header-content {
+    flex-direction: column;
+  }
 }
 
 
